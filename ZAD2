@@ -1,0 +1,43 @@
+sing System;
+class Program
+{
+    static void Main()
+    {
+        List<string> list = Console.ReadLine().Split(',').ToList();
+        string command = " ";
+
+        while (command != "END")
+        {
+            command = Console.ReadLine();
+            if (command == "Add visitor")
+            {
+                string newOwn = Console.ReadLine();
+                list.Add(newOwn);
+            }
+            if (command == "Add visitor on position")
+            {
+                string newOwn = Console.ReadLine();
+                int pos = int.Parse(Console.ReadLine());
+                list.Insert(pos, newOwn);
+            }
+            if (command == "Remove visitor on position")
+            {
+                int pos1 = int.Parse(Console.ReadLine());
+                list.RemoveAt(pos1);
+            }
+            if (command == "Remove last visitor")
+            {
+                list.RemoveAt(-1);
+            }
+            if (command == "Remove first visitor")
+            {
+                list.RemoveAt(0);
+            }
+        }
+        for (int i = 0; i < list.Count; i++)
+        {
+            Console.Write($"{list[i]},");
+        }
+        
+    }
+}
