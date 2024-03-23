@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        
+       var words = Console.ReadLine();
+       string output = string.Concat(words.Where(Char.IsDigit));
+        if (true)
+        {
+
+        }
+        string output1 = string.Concat(words.Where(Char.IsSymbol));
+        string output3 = string.Concat(words.Where(Char.IsLetter));
+        Console.WriteLine(output1);
+    }
+}
