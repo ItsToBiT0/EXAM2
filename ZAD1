@@ -1,0 +1,32 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+         int NumberOfEqip = int.Parse(Console.ReadLine());
+         string typeOf = " ";
+        int sum = 0;
+        for (int i = 0; i < NumberOfEqip; i++)
+        {
+            typeOf = Console.ReadLine();
+            if (typeOf == "treadmill")
+            {
+                sum = sum + 5899;
+            }
+            if (typeOf == "cross trainer")
+            {
+                sum = sum + 1699;
+            }
+            if (typeOf == "exercise bike")
+            {
+                sum = sum + 1789;
+            }
+            if (typeOf == "dumbbells")
+            {
+                sum =sum+ 579;
+            }
+        }
+
+        Console.WriteLine($"{sum:f2}");
+    }
+}
