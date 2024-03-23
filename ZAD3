@@ -1,0 +1,46 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+       Dictionary<string, int> map = new Dictionary<string, int>();
+        string word = " ";
+          
+
+        while (word != "END OF GAME")
+        {
+            int sum = 0;
+            word = Console.ReadLine();
+            for (int i = 0; i < word.Length; i++)
+            {
+                sum += word[i];
+                
+            }
+           
+            if (word[0].ToString().ToLower()!=word[0].ToString())
+            {
+                sum += 15;
+            }
+            
+            if (word.Last() == 't')
+            {
+                sum += 20;
+            }
+            if (word.Length >=10)
+            {
+                sum += 10;
+            }
+            if (word == "END OF GAME")
+            {
+                break;
+            }
+                map.Add(word, sum);
+          
+        }
+        var sort = map.OrderBy(x => x.Value);
+        
+        Console.WriteLine(sort.Last());
+        
+        
+    }
+}
