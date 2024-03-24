@@ -1,0 +1,31 @@
+using System;
+using System.Threading.Channels;
+
+internal class Program
+{
+    static void Main()
+    {
+        int numberSum = int.Parse(Console.ReadLine());
+        int sum = 0;
+        for (int i = 0; i < numberSum; i++)
+        {
+            string typeOf = Console.ReadLine();
+            if (typeOf == "surface")
+            {
+                sum += 1300;
+            }
+            if (typeOf =="net")
+            {
+                sum += 3200;
+            }
+            if (typeOf =="ball")
+            {
+                sum += 10;
+            }
+        }
+
+
+        Console.WriteLine($"{sum:f2}");
+    }
+    
+}
